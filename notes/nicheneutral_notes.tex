@@ -1,0 +1,75 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=1.00in, bottom=1.0in, left=1.1in, right=1.1in]{geometry}
+\renewcommand{\baselinestretch}{1.2}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LO]{Niches \& neutrality in phenology}
+\fancyhead[RO]{Notes -- 2014}
+
+\def\labelitemi{--}
+\parindent=0pt
+
+\begin{document}
+\bibliographystyle{/Users/Lizzie/Documents/EndnoteRelated/Bibtex/styles/amnat}
+\renewcommand{\refname}{\CHead{}}
+
+% using old HUCE title for now
+\title{Shifting phenology: \\How niche \& neutral forces influence changing plant communities}
+\date{Started: 21 August 2014}
+\author{}
+\maketitle
+
+\section{Overview}
+Okay! Starting a new project here, boys and girls.\\
+
+My current thought on this project is to test for evidence of niche or neutral forces in plant communities via how separated or clumped they are phenologically. I plan to only use David Inouye's data so far since it's the only real way to get phenological curves where we could measure actual overlap.\\
+
+On 4 August 2014, while visiting Gothic, TJ Davies and I discussed the project some. The notes are scanned in file \verb|NicheNeutral_4Aug2014notes.pdf| but here are some high points:
+\begin{itemize}
+\item Some not-exactly-neutral models I could use that are also not exactly what I want since they just tell you how much the \emph{whole} community appears, no way to narrow in on things really.
+\begin{itemize}
+\item Null models (mid-domain etc.)
+\item Variance rates: JD did this with carnivore teeth, something about the expected variance across the community
+\end{itemize}
+\item Doing the neutral part of this is harder than I may have imagined. First off, neutral theory works with {\bf abundance} data (shizer) and {\bf a regional pool} (we could use ALL of David's plots together though to neatly set that)
+\item Neutral theory may also make trait predictions, maybe I should look into that....
+\item Neutral model is spatiotemporal already, but people usually just run out the model to equilibrium to look at space in the end (we could discuss whether that really goes with climate change reality...). The question then becomes how to adapt the model to {\bf within-seaon time} ... how to set probability of space being occupied? How to get early ones to start early? Otherwise just the abundant one should start season ....(see, it's harder but also more interesting than I originally thought).
+\end{itemize}
+
+\section{Text from my CAREER award}
+
+\emph{Testing for evidence of assembly via temporal niche separation versus neutral forces in alpine meadow species using a 40-year community phenology dataset, and testing how the prevalence of niche versus neutral assembly processes are altered by climate change.}\\
+
+\emph{Introduction:} While understanding the fundamental controls that shape species assemblages has been a central question throughout the history of ecology, a current debate over whether niche or neutral processes shape communities has drawn much attention and research. Niche theory can clearly explain the diversity of species on earth, but testing it is difficult because species' niches occur in \(n\)-dimensional space \citep{Hutchinson:1959xi} and thus adequately mapping a single species' exact niche space can be difficult. In contrast, neutral theory requires only a few variables to predict broad species diversity patterns. While neutral theory has been studied in the background for almost 40 years \citep{Watterson:1974gk,Caswell:1976np}, it has gained prominence recently as a `unified neutral model' \citep{Hubbell:2001vo} that has been accurate at predicting species diversity and abundances across space. This has lead to an expanding body of work studying the spatial patterns of communities from coral reefs to temperate forests for whether they conform to neutral or niche models \citep{Volkov:2007xt,Vergnon:2009bh}. \\
+
+However, while the recent debate has focused predominantly on spatial patterns, it has ignored a highly-similar debate that populated journal pages nearly 30 years ago: this one focused on temporal patterns. Following on MacArthur's formalization of the broken-stick model \citep{MACARTHUR:1957gf}, a community assembly model based on random breaks of niche space, ecologists studied the pattern of flowering times of species in a number of communities debating whether the pattern indicated niches, timing carefully shaped by natural selection to minimize overlap, or simply a random pattern \citep{Cole:1981il}. The debate featured prominently in ecology for some years \citep{Gleeson:1981wh,Fleming:1984hu}, yet it quieted without any clear resolution and the study of flowering times moved away from understanding how phenology may affect community assembly.\\
+
+The rise of climate change research, however, has brought forward much new data. Yet while ecologists have used these data to document shifts in flowering times, there has been little work to examine how such shifts affect community assembly \citep{wolkovich:2010fee}. Because phenology is tied strongly to plant reproductive output and resources, such as pollinators and light, are generally limited, shifts in species phenology could have cascading fitness effects for entire communities; thus changes in the phenology of a few species may feedback to cause a cascade of plant community changes. This would be especially true if niche dynamics strongly govern flowering phenology \citep{gotelli1996}. In contrast, if neutral dynamics appear at play for phenology then our ability to predict future communities enters a realm of stochastic processes.\\
+
+Both niche and neutral theory make predictions through time regarding the synchrony (or asynchrony) of population attributes \citep{Houlahan:2007qy,Vergnon:2009bh}. Niche theory predicts limiting similarity \citep{ABRAMS:1980dq}: species co-occurring must diverge in at least some of their traits to prevent competition for the same niche space. Flowering phenology represents a clearly defined axis of potential overlap: if species are flowering at the same time and use the same pollinator guilds they should compete for pollinator resources. However, species that use different pollinators may co-flower with low risk of pollinator competition. Neutral theory assumes `ecological equivalence,' that all species are functionally the same, and thus predicts community assembly by stochastic patterns for birth, death and migration of individuals. \citep{Hubbell:2001vo}. \emph{Thus, under niche theory, species that use the same pollinators should show limiting similarity in their flowering---with each species occupying a distinct period of the growing season (Figure 3b-c). Species that do not share pollinators may overlap in their flowering (Figure 3a,c). Neutral theory, in contrast, predicts that species' phenologies would appear randomly shuffled.}\\
+
+These predictions can be tested with currently-available data (see below) and adapting spatial models to temporal data. Spatial statistics can be adjusted to test for significant levels of synchrony \citep[e.g.,][]{Bjornstad:1999kl}, and I will develop models that predict the maximum degree of pair-wise phenological asynchrony possible under neutral theory, including models that include growing season length, which may affect the amount of synchrony expected \citep{Loreau:2008xy}: because growing season length bounds possible phenology in many habitats I expect species may overlap strongly at the mid-season under some random models \citep[a phenological mid-domain effect, see][]{Morales:2005ex}. 
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=1\textwidth]{/Users/Lizzie/Documents/git/grants/career/2014/figures/figs4and5.png}
+\end{center}
+\end{figure}
+\vspace{1.5ex}\\
+\emph{Plan of work:} I will use two major approaches to test whether plant communities' flowering times appear to be governed by niche or neutral dynamics: first, I will examine overlap by (a) using frequencies of flower count data of each species in each year to measure total flowering niche overlap between species, and (b) using peak flowering date of each species in each year to measure `overlap' as the distance between peak flowering. Using both the full curve data and peak flowering date will help control for variation in curve shape of the same species across years \citep{CaraDonna2014} and provide an additional way to look for effects of variation in growing season length. Next I plan to adapt relevant quantitative spatial approaches \citep[e.g.,][]{Houlahan:2007qy,Vergnon:2009bh} to the temporal domain. Because there are hundreds (if not more) models of niche and neutral theory I will focus on methods well-suited for the analysis of phenological overlap, as well as the data resources I will use. Importantly, because some mesocosm experiments have suggested that niche versus neutral forces may act in concert \citep{Chase:2007yt} I will use methods that allow tests of whether communities have shifted in how strongly they appear driven by niche or neutral dynamics with changing climate and species extinctions. \\
+
+Examining niche and neutral processes via the expected models will require a multivariate trait approach and a way to robustly estimate phenological overlap. A multivariate approach---examining the role of multiple traits (phenology, pollinators and height)---has special promise for understanding mechanisms operating within communities, but requires species-rich, community-level data with accompanying data on pollination mode, and quantitative traits that may mediate competition for pollinators, such as plant height. I propose to use a 40-year phenological dataset from an alpine meadow system in Gothic, Colorado \citep[Figure 4-5, see also letter of support from Dr. Inouye, and see][]{Inouye:2008gj}, which contains flowering times on over a hundred of species and will be accompanied by compiled trait information, including extremely detailed information on pollination guilds (Figure 5). I will augment these data with additional data from the field or literature, when necessary. \emph{This dataset is very rare among long-term phenology datasets in including data on number of flowers produced, which should allow the best estimate of species' phenological niches and thus should allow tests of another fundamental prediction of niche theory: that species niche overlap should scale inversely with fitness.}\\
+
+As this dataset represents a long-term time-series of flowering times it provides the additional opportunity to test how patterns have shifted over time. Recent studies using short-term experiments suggest environmental forces such as drought may shift drivers of community assembly from random to niche processes \citep{Chase:2007yt}, suggesting the drivers of natural communities may additionally shift under global climate change. \emph{Using long-term phenology data I can test whether past climate change has altered the relative prevalence of niche and neutral processes in communities.} Preliminary analyses of the Gothic dataset suggest niche-partitioning of the growing season during the `average' climate years but uneven, possibly neutral, overlap in a particularly warm year (Figure 5). \\
+
+\emph{Expected outcomes \& significance:} Understanding whether the diversity of species is governed by niche processes or neutral forces has profound implications for predicting community and ecosystem responses to global change, as well as fundamental repercussions for basic ecology. If communities are carefully structured to minimize temporal niche overlap and maximize variation in their phenologies, then rapidly shifting growing seasons may fundamentally disrupt plant communities in predictable ways. In contrast, if the phenology of plant communities is more neutral, and each species acts as an isolated unit, then climate change may have variable, less predictable outcomes.\\
+
+\emph {Links to educational goals:} This project will comprise the major research efforts of one postdoctoral researcher. I will work closely with this researcher to define the full scope of the project and will travel with him/her to Gothic, Colorado to work on the project with collaborator Dr. Inouye in the summers of years 4 and 5.
+
+\bibliography{/Users/Lizzie/Documents/EndnoteRelated/Bibtex/LizzieMainMinimal}
+
+\end{document}
