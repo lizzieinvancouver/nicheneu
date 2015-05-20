@@ -19,15 +19,148 @@
 \renewcommand{\refname}{\CHead{}}
 
 % using old HUCE title for now
-\title{Shifting phenology: \\How niche \& neutral forces influence changing plant communities}
-\date{Started: 21 August 2014}
+\title{Shifting phenology: How niche and stochastic forces influence changing plant communities} 
+% Or :
+% Shifting phenology: The importance of the temporal niche in assembling plant communities 
+% The importance of shifting phenology in assembling plant communities
+% Less good: Testing for non-random assembly in changing plant communities // How assembly forces may influence changing plant communities //  The temporal niche: Phenological constraints on plant community assembly // Will the phenological niche constain plant communities?// How climate change and phenology assemble shifting plant communities 
+
+% Old title: Shifting phenology: \\How niche \& neutral forces influence changing plant communities
+
+\date{Started: 21 August 2014\\ Last updated: 15 May 2015}
 \author{}
 \maketitle
 
 \section{Overview}
 Okay! Starting a new project here, boys and girls.\\
 
-My current thought on this project is to test for evidence of niche or neutral forces in plant communities via how separated or clumped they are phenologically. I plan to only use David Inouye's data so far since it's the only real way to get phenological curves where we could measure actual overlap.\\
+My current thought on this project is to test for evidence of niche and neutral (er, random) forces in plant communities via how separated or clumped they are phenologically. I plan to only use David Inouye's data so far since it's the only real way to get phenological curves where we could measure actual overlap.\\
+
+
+\section{Tasks! by end of June}
+\begin{enumerate}
+\item Do a quick test for evidence of over or under-dispersion using variance ratios of peak and first flowering dates (do it for each year and also each plot).
+\begin{enumerate}
+\item Lizzie: Calculate start and end flowering dates and date of max flowering (aka peak flowering) per species per plot per year for Inouye data. Send to JD.
+\item Jonathan: Run variance ratio tests on each plot for each year. Compile summary information and figures for Lizzie.
+\end{enumerate}
+\item Email Becky Irwin about pollinator data
+\item Read up on co-flowering
+\item If time allows: Show how to calculate curve overlap for grant
+\item If time allows: Do mid-doman shuffling for grant (Jonathan will do this for variance ratios)
+\item Keep working at ideas for adding in students:
+\begin{enumerate}
+\item Have them go to Gothic and measure traits.
+\item Have them help extract individual counts from Inouye xls sheets ....
+\item Have them take summer course on climate data and phenology: Make them work on climate models to predict peak and end of flowering. 
+\end{enumerate}
+\end{enumerate}
+
+\section{Goals and hypotheses}
+ Note that these require data showing that communities are over or under dispersed.
+\begin{enumerate}
+\item Goal: \emph{Test for how random versus non-random (over or under-dispersion) flowering times are in a subalpine meadow community.}
+\begin{enumerate}
+\item Step 1: Measure niche overlap in flowering communities
+\item Step 2: Compare to null model 1: mid-domain---shuffle all flowering curves present in that plot in that year. Shuffle both curve shape and species order (Jonathan will do this.)
+\item Step 3: Compare to null model 2: regional pool model---build flowering curves based on local (plot) climate for each species and filter in species based on focal plot's species $n$ for that year and its local climate data for that year. 
+\end{enumerate}
+\item Goal: \emph{Test for shifts in random versus non-random with shifting climate.}
+\item Goal: \emph{Test hypotheses of drivers of non-random flowering times}
+\begin{enumerate}
+\item Overdispersion
+\begin{enumerate}
+\item Hypothesis: Species partition temporal niches to maximize access to pollinators.\\ \emph{Prediction:} Species temporal niches should be more overdispersed as sharing of pollinator community increases.
+\item Hypothesis: Species partition temporal niches to maximize access to soome other resource.\\ \emph{Prediction:} Species temporal niches do not co-vary with pollinators ... this prediction is {\bf weak!.}
+\item Hypothesis: Flowering co-varies with some other trait that drives overdispersion.\\ \emph{Prediction:} Traits (seed mass, and those associated with lower competitive abilities such as LMA, C:N etc.) co-vary with flowering times. 
+\item Hypothesis: Reinforcement \\ \emph{Prediction:} Flowering times diverge as relatedness increased. (Jonathan does this.) 
+\end{enumerate}
+\item Underdispersion
+\begin{enumerate}
+\item Hypothesis: Co-flowering. \\ \emph{Prediction:} Species temporal niches should be more under-dispersed as sharing of pollinator community increases.
+\item Hypothesis: Filtering of particular clades in environment leads to underdispersion, assuming phylogenetic conservatism of flowering times. \\ \emph{Predictions:}  Strong phylogenetic signal in flowering time; phylogenetically underdispersed communities and---to put it yet another way---phenological underdispersion only present in communities with phylogenetic underdispersion.
+\end{enumerate}
+\item Hypotheses not testing because no easy test:
+\begin{enumerate}
+\item Hypothesis for overdispersion: Avoidance of pre-dispersal seed predators (Elzinger et al. 2007)
+\item Hypothesis for underdispersion: Avoidance (via satiation) of pre-dispersal seed predators
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+
+
+\section{Neutral theory}
+On 12 May 2015 (at the Whiteley Center) we (I and Jonathan Davies) discussed further neutral models and null models. Low but interesting-hanging fruit seems to be:
+\begin{itemize}
+\item Test for evidence of limiting similarity (including where divergence in flowering times increases as other traits, such as shared pollinators or hieght, increases)
+\item Test for alternative hypothesis: Co-flowering
+\begin{itemize}
+\item Easy: Take flowering mid-point and do variance ratios (standard approach)
+\item Only mildly-trickier: Get niche overlap and develop null model (see below on null model)
+\end{itemize}
+\item Mid-domain null model: Take existing flowering curves and shuffle within bounds of season (bounds are based on the data)
+\item Growing season null model\footnote{This works only if you have local temperature data for each plot; need to ask David.}: Develop phenological start (and end and peak, trickier) dates as $f(x)$ of temperature, then---using plot-level climate data for that year---build curve for that plot for each species. Next, randomly sample in species based on species $n$ from the data (e.g., the plot has 8 species that year, so sample in 8 random species' flowering curves that are specific for that climate). 
+\end{itemize}
+
+Other random ideas:
+\begin{itemize}
+\item Phylogenetic null model? Nah, $K$ was not so high in Gothic in Jonatan's paper or in CaraDonna's. 
+\item Some other null model?
+\end{itemize}
+
+From 12 May 2015, notes by Jonathan and me on possible neutral models:
+\begin{itemize}
+\item Neutral model: Jonathan's version:  To start, all species occupy an equal number of cells and let dynamics play out until stable based on below rules:
+\begin{itemize}
+\item Each space is occupied by a single individual
+\item Each major timestep is a season
+\item At each major timestep: an individual can die ($P(extinction)$) or flower ($P(flower)$)
+\item If flowering, the model goes to a minor timestep which depends on a $f(x)$ for the probability of flowering across the growing season (e.g., a $f(x)$ across season). Each individual can flower only once each season so the total probability given an increasing $f(x)$ across the season would be hump-shaped, as it would be the product of that $f(x)$ and not flowering to date that season.
+\item Only species that flower contribute to propagule pool.
+\item After flowering: Space is held by individual and propagules of flowering species are added to propagule pool at end of season
+\item Empty cells (through death) are filled by a new individual of species $i$ based on abundance of propagules of each species in community at start of new season (which is identical to the propagules at the end of season, no overwintering death)
+\item At the end of the season:
+\begin{itemize}
+\item all space is held (generation time=$\infty$)
+\item all species die (aka annuals)
+\end{itemize}
+\item Expected outcome:
+\begin{itemize}
+\item If all values are identical then community flowering curve is identical to each individual species' flowering curves
+\item If species differ in values, one species should win in long-run.
+\end{itemize}
+\item Benefits of this version: It's quick, it has few assumptions, and would be possible to explore what additional parameters are required to maintain species with sub-optimal flowering curves. (See more below.)
+\end{itemize}
+\item Neutral model: Lizzie's version: To starts, all species occupy an equal number of cells and let dynamics play out until stable based on below rules:
+\begin{itemize}
+\item Each space is occupied by a single individual
+\item At each timestep: an individual can die ($P(extinction)$) or flower ($P(flower)$)
+\item $P(flower)=$days since occupied spot (a step $f(x)$ where it's zero until it's 1, and the $f(x)$ restarts each season)
+\item After flowering: Space is held by individual and propagules of flowering species are added to propagule pool immediately (not at the end of season)
+\item Empty cells (through death) are filled immediately by a new individual of species $i$ based on abundance of propagules of each species in community at that timestep (so there is a seedbank in this model)
+\item At the end of the season:
+\begin{itemize}
+\item all space is held (generation time=$\inf$)
+\item all species die (aka annuals)
+\end{itemize}
+\item Expected outcome:
+\begin{itemize}
+\item If all values are identical then community flowering curve is identical to each individual species' flowering curves
+\item If species differ in values, one species should win in long-run and it should be a species with a short time to flowering (as those will get in mutiple generations and others will not)
+\end{itemize}
+\item Benefits of approach: It naturally allows for multiple generations per season. Note that most species will inherently be annually or biennially reproductives (unless time to flower is longer than one season). 
+\end{itemize}
+\end{itemize}
+
+\noindent {\bf Ways to make model more interesting and/or possibly allow coexistence:}
+\begin{itemize}
+\item Space opens up sequentially for a while at the start of season (like snow melting out across a plot, this microclimatic variation would naturally lead to intraspecific variation)
+\item Each species has a time between flowering and setting seed. If this is not met then propagules are not made. Then add trade-off between setting seed quickly and propagule number (or survival).
+\item Time it takes to flower is an inverse $f(x)$ of time from flowering to seedset.
+\item Add seedbank with varying longevities---with a little work this leads to ... the storage effect!
+\end{itemize}
+
 
 On 4 August 2014, while visiting Gothic, TJ Davies and I discussed the project some. The notes are scanned in file \verb|NicheNeutral_4Aug2014notes.pdf| but here are some high points:
 \begin{itemize}
@@ -38,7 +171,7 @@ On 4 August 2014, while visiting Gothic, TJ Davies and I discussed the project s
 \end{itemize}
 \item Doing the neutral part of this is harder than I may have imagined. First off, neutral theory works with {\bf abundance} data (shizer) and {\bf a regional pool} (we could use ALL of David's plots together though to neatly set that)
 \item Neutral theory may also make trait predictions, maybe I should look into that....
-\item Neutral model is spatiotemporal already, but people usually just run out the model to equilibrium to look at space in the end (we could discuss whether that really goes with climate change reality...). The question then becomes how to adapt the model to {\bf within-seaon time} ... how to set probability of space being occupied? How to get early ones to start early? Otherwise just the abundant one should start season ....(see, it's harder but also more interesting than I originally thought).
+\item Neutral model is spatiotemporal already, but people usually just run out the model to equilibrium to look at space in the end (we could discuss whether that really goes with climate change reality...). The question then becomes how to adapt the model to {\bf within-season time} ... how to set probability of space being occupied? How to get early ones to start early? Otherwise just the abundant one should start season ....(see, it's harder but also more interesting than I originally thought).
 \end{itemize}
 
 \section{Text from my CAREER award}
